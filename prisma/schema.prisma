@@ -20,15 +20,17 @@ datasource db {
 
 model User {
   id       Int       @id @default(autoincrement())
+  
   email String @unique
   passwordHash String 
+
   sessions Session[]
 }
 
 model Session {
-  id        String   @id
+  id        String   @id @default(cuid()) 
   userId    Int
   expiresAt DateTime
 
-  user      User     @relation(references: [id], fields: [userId], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }

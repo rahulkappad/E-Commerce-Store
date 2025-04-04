@@ -16,3 +16,6 @@ npm install react-icons --save (For icons)
 lucia-auth.com (authentication) - basic api -prisma 
 copy user model
 npm i @oslojs/encoding @oslojs/crypto
+npx prisma db push
+middleware.js = CSRF protection
+
