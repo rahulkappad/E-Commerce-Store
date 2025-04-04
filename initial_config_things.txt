@@ -5,3 +5,12 @@ npm install zustand
 npm install zod
 npm install prisma -D
 npm install @prisma/client
+Versel - for data base signupp with mail - imported git respo in it.
+once done create database and copy all data from and copy to .env.
+npx prisma init
+create a model in prisma file
+npx prisma db push
+for push that model than 
+npx prisma studio
+
+
