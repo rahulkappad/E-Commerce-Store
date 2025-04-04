@@ -12,5 +12,7 @@ create a model in prisma file
 npx prisma db push
 for push that model than 
 npx prisma studio
-
-
+npm install react-icons --save (For icons)
+lucia-auth.com (authentication) - basic api -prisma 
+copy user model
+npm i @oslojs/encoding @oslojs/crypto
