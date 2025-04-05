@@ -62,7 +62,7 @@ const Header = () => {
                 <Link href='#'>Sale</Link>
               </nav>
           </div>
-          <Link href='#'>link</Link>
+          <Link href='#'>DEAL</Link>
           <div className='flex flex-1 justify-end items-center gap-2 sm:gap-4'>
             <button className='text-gray-700 hover:text-gray-950 hidden sm:block'>
             <CiSearch className='h-5 w-5 sm:h-6 sm:w-6'/>
