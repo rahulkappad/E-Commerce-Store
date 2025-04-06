@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vercel-build": "npx prisma generate && next build"
   },
   "dependencies": {
     "@oslojs/crypto": "^1.0.1",
