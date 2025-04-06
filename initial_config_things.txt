@@ -18,4 +18,5 @@ copy user model
 npm i @oslojs/encoding @oslojs/crypto
 npx prisma db push
 middleware.js = CSRF protection
+npm install lucide-react (for loader)
 

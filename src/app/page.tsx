@@ -1,11 +1,12 @@
+import { getCurrentSession } from "@/actions/auth";
 
-export default function Home() {
+const Home=async() => {
+  const {user} = await getCurrentSession();
   return (
-   <div className="text-black">
-    HomeHomeHomeHomeHomeHomeHomeHomeHomeHomeHomeHomeHomeHomeHomeHomeHome
-    HomeHomeHomeHomeHomeHomeHomeHomeHomeHomeHomeHomeHomeHomeHome
-    HomeHomeHomeHomeHomeHomeHomeHomeHomeHome
-    HomeHomeHomeHomeHomeHomeHomeHome
+   <div>
+    {JSON.stringify(user)}
    </div>
   );
 }
+
+export default Home;

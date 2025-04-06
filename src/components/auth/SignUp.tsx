@@ -2,6 +2,7 @@
 
 import React, { useActionState } from 'react'
 import Form from 'next/form';
+import { Loader2 } from 'lucide-react';
 
 const initialState ={
   message:'',
@@ -40,16 +41,39 @@ const SignUp = ({action}:SignUpProps) => {
             />
           </div>
         {/* Password */}
-          <div className=''>
-            
+          <div className='space-y-2'>
+            <label htmlFor="password" className='block text-sm font-medium test-gray-700'>
+            Password
+            </label>
+            <input 
+            type='password'
+            id='password'
+            name='password' 
+            autoComplete='new-password'
+            required
+            className='w-full px-4 py-3 border border-gray-200 rounded-md focus:ring-2 focus:ring-black focus:border-transparent transition-colors'
+            placeholder='Create Your Password'
+            />
           </div>
         {/* Copy */}
-          <div className=''>
-
+          <div className='text-center'>
+              <p className='text-xs text-gray-500 mb-2 '>⚡ Only 127 Welcome Bonus Packages remaining</p>
+              <p className='text-xs text-gray-500 mb-2 '>⏰ Offer expires in: 13:45</p>
           </div>
         {/* Submit */}
-          <button>
-
+          <button
+          type='submit'
+          disabled={isPending}
+          className={`w-full bg-rose-600 text-white py-3 rounded-md hover:bg-rose-700 transition-colors font-medium flex items-center justify-center gap-2 ${isPending ? `cursor-not-allowed`:''}`}
+          >
+            {isPending ?(
+              <React.Fragment>
+                <Loader2 className='h-4 w-4 animate-spin'/>
+                CREATING ACCOUNT....
+                </React.Fragment>
+            ) : (
+              `Create Account`
+            )}
           </button>
       </div>
     </Form>
