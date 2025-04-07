@@ -19,4 +19,13 @@ npm i @oslojs/encoding @oslojs/crypto
 npx prisma db push
 middleware.js = CSRF protection
 npm install lucide-react (for loader)
-
+sanity.io (for storing data)
+create a project - set local host
+npm install sanity -G (if not works)
+npm install sanity -g --legacy-peer-deps
+sanity --version
+sanity init - configure project
+create schamas under sanity - map to index.ts
+sanity deploy
+next15-deal-procject
+sanity dataset import ./production.tar.gz

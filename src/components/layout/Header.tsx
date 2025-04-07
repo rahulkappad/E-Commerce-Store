@@ -82,11 +82,11 @@ const Header = ({user}:HeaderProps) => {
             
             {user ? (
                 <div className='flex items-center gap-2 sm:gap-2'>
-                  <span className='text-xs sm:text-sm text-gray-700 hidden md:block'>
+                  <span className='text-xs sm:text-sm text-gray-700 hidden md:block hover:underline'>
                     {user.email}
                   </span>
                   <Link href='#'
-                  className='text-xs sm:text-sm font-medium text-gray-700 hover:text-gray-950'
+                  className='text-xs sm:text-sm font-medium text-gray-700 hover:text-gray-950 hover:border-gray-950 '
                   onClick={async(e)=>{
                     e.preventDefault();
                     await logoutUser();
