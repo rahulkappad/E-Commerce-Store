@@ -1,11 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-const CategoryPage = ({ params }: { params: { slug: string } }) => {
+const page = () => {
   return (
-    <div>
-      <h1>Category: {params.slug}</h1>
-    </div>
-  );
-};
+    <div>page</div>
+  )
+}
 
-export default CategoryPage;
+export default page
