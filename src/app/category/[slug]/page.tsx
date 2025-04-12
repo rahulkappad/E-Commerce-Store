@@ -1,12 +1,11 @@
-type CategoryPageProps = {
-    params: {
-      slug: string;
-    };
-  };
-  
-  const CategoryPage = async ({ params }: CategoryPageProps) => {
-    const { slug } = params;
-  
-    // Your logic here
-  };
-  
+import React from 'react';
+
+const CategoryPage = ({ params }: { params: { slug: string } }) => {
+  return (
+    <div>
+      <h1>Category: {params.slug}</h1>
+    </div>
+  );
+};
+
+export default CategoryPage;
