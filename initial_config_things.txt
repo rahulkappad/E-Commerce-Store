@@ -30,3 +30,15 @@ sanity deploy
 next15-deal-procject
 sanity dataset import ./production.tar.gz
 sanity schema extract - for json
+sanity typegen generate - convert json to ts
+
+
+
+
+
+
+
+
+
+
+

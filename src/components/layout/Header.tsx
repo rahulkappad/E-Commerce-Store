@@ -23,9 +23,10 @@ const AnnoucementBar = () => {
 
 type HeaderProps ={
   user :Omit<User,"passwordHash"> | null;
+  categorySelector?: React.ReactNode;
 }
 
-const Header = ({user}:HeaderProps) => {
+const Header = ({user,categorySelector}:HeaderProps) => {
   const router =useRouter()
 
   const [isOpen,setIsOpen] = useState<boolean>(true);
@@ -65,8 +66,7 @@ const Header = ({user}:HeaderProps) => {
               <GiHamburgerMenu className='h-5 w-5 sm:h-6 sm:w-6'/>
               </button>
               <nav className='hidden md:flex gap-4 lg:gap-6 text-sm font-medium'>
-                <Link href='#'>Shop</Link>
-                <Link href='#'>New Arrivals</Link>
+                {categorySelector}
                 <Link href='#'>Sale</Link>
               </nav>
           </div>

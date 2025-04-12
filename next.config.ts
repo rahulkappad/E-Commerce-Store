@@ -1,16 +1,17 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-  images :{
-    domains :['cdn.sanity.io']
-  }
+// next.config.ts
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        pathname: '/images/**', // Optional: use '**' to match all paths
+      },
+    ],
+  },
 };
 
 export default nextConfig;
-// next.config.js
-module.exports = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-};
+
